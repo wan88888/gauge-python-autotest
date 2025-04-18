@@ -133,22 +133,4 @@ class ConfigManager:
     def clear_cache(self) -> None:
         """清除配置缓存"""
         self._cache.clear()
-        self.logger.debug("Configuration cache cleared")
-        
-    def get_test_data_path(self, relative_path: str) -> str:
-        """获取测试数据文件的完整路径
-        
-        Args:
-            relative_path: 相对于resources/test_data的路径
-            
-        Returns:
-            完整路径字符串
-        """
-        base_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 
-                                 'resources', 'test_data')
-        full_path = os.path.join(base_path, relative_path)
-        
-        if not os.path.exists(full_path):
-            self.logger.warning(f"Test data file not found: {full_path}")
-            
-        return full_path 
+        self.logger.debug("Configuration cache cleared") 

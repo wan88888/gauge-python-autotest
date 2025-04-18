@@ -19,9 +19,12 @@ This is a unified test automation framework that supports API, Web, and Mobile a
 │   ├── app/                # Mobile app testing components
 │   │   └── pages/          # Mobile page objects
 │   └── utils/              # Utility modules
-├── resources/              # Test resources
-│   ├── config/             # Configuration files
-│   └── data/               # Test data
+├── env/                    # Environment-specific configurations
+│   ├── android/            # Android environment settings
+│   ├── ios/                # iOS environment settings
+│   ├── web/                # Web environment settings
+│   ├── api/                # API environment settings
+│   └── default/            # Default settings
 ├── specs/                  # Gauge specifications
 ├── step_impl/              # Step implementations
 ├── logs/                   # Test logs (generated)
@@ -67,27 +70,31 @@ gauge run specs/
 
 Run API tests:
 ```
-gauge run specs/api_test.spec
+gauge run specs/api_test.spec -e api
 ```
 
 Run Web tests:
 ```
-gauge run specs/web_test.spec
+gauge run specs/web_test.spec -e web
 ```
 
 Run Android tests:
 ```
-gauge run specs/app_test.spec --tags android
+gauge run specs/app_test.spec -e android --tags android
 ```
 
 Run iOS tests:
 ```
-gauge run specs/app_test.spec --tags ios
+gauge run specs/app_test.spec -e ios --tags ios
 ```
 
 ## Configuration
 
-Configuration settings are stored in `resources/config/config.ini`. Update these settings based on your environment.
+Configuration settings are stored in environment-specific property files in the `env` directory. For example:
+- `env/android/android.properties` - Android settings
+- `env/ios/ios.properties` - iOS settings
+- `env/web/web.properties` - Web settings
+- `env/api/api.properties` - API settings
 
 ## Extending the Framework
 
