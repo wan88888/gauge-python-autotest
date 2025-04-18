@@ -1,0 +1,66 @@
+# Gauge - metadata dir
+.gauge
+
+# Gauge - log files dir
+logs
+
+# Gauge - reports dir
+reports
+
+# Gauge - temporary files
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# Gauge - screenshots
+screenshots/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+dist/
+build/
+develop-eggs/
+downloads/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Virtual Environment
+venv/
+ENV/
+.env
+.venv
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Gauge - python compiled files
+*.pyc
+
