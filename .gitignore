@@ -39,11 +39,13 @@ wheels/
 .coverage.*
 .pytest_cache/
 
-# Virtual Environment
+# Virtual Environment - 保留env目录
 venv/
 ENV/
 .env
 .venv
+# 不忽略环境配置目录
+!env/
 
 # IDE specific files
 .idea/
